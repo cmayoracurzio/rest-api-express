@@ -1,9 +1,11 @@
 import { drizzle } from "drizzle-orm/postgres-js";
-import { migrate } from "drizzle-orm/postgres-js/migrator";
 import postgres from "postgres";
 
-const connectionString = process.env.DATABASE_URL!;
-const sql = postgres(connectionString, { max: 1 });
-const db = drizzle(sql);
+const connectionString = process.env.DATABASE_URL;
 
-await migrate(db, { migrationsFolder: "drizzle" });
+if (!connectionString) {
+  throw new Error("DATABASE_URL is not defined");
+}
+
+const sql = postgres(connectionString, { max: 1 });
+export const db = drizzle(sql);

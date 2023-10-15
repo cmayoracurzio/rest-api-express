@@ -20,7 +20,7 @@ services:
     restart: always
     user: postgres
     volumes:
-      - ./src/database/migrations/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+      - ./src/database/migrations/latest.sql:/docker-entrypoint-initdb.d/01-latest.sql
       - ./src/database/seeds/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql
     environment:
       POSTGRES_PASSWORD: password123
