@@ -13,7 +13,12 @@ app.use(express.json());
 app.use("/users", userRoutes);
 app.use("/messages", messageRoutes);
 
-// Error handling middleware
+// API documentation endpoint
+app.get("/docs", (req, res) => {
+  res.send("Placeholder message for the API documentation");
+});
+
+// Middleware for error handling
 app.use(errorHandler);
 
 app.listen(PORT, () => {
