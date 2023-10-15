@@ -4,7 +4,6 @@ services:
       context: .
     environment:
       NODE_ENV: development
-      PORT: 3000
       DATABASE_URL: postgresql://postgres:password123@db:5432/db123
     ports:
       - 3000:3000

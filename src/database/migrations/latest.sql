@@ -2,8 +2,8 @@ CREATE TABLE IF NOT EXISTS "messages" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"user_id" integer NOT NULL,
 	"content" text NOT NULL,
-	"created_at" timestamp DEFAULT now(),
-	"updated_at" timestamp DEFAULT now()
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "users" (
@@ -13,8 +13,9 @@ CREATE TABLE IF NOT EXISTS "users" (
 	"first_name" text,
 	"family_name" text,
 	"address" text,
-	"created_at" timestamp DEFAULT now(),
-	"updated_at" timestamp DEFAULT now()
+	"created_at" timestamp DEFAULT now() NOT NULL,
+	"updated_at" timestamp,
+	CONSTRAINT "users_user_name_unique" UNIQUE("user_name")
 );
 --> statement-breakpoint
 DO $$ BEGIN

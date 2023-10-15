@@ -1,18 +1,7 @@
 # Backlog
 
-- User routes
-- Message routes
-- Check that everything is RESTful
-- Error handling (with middleware?)
-- Other middleware and CORS
-- In-line comments
-- README.md file
-- External documentation
-- Testing
-- Linter
-- Versioning
-- Logging and monitoring
-- Review how to deploy things in production (e.g., Dockerfile for server, what to do for database, etc.)
+- More production-ready considerations (testing, linter, versioning, more middleware and CORS, API documentation)
+- Update README.md and publish repo
 
 # RESTful API with TypeScript and Express.js
 
@@ -25,9 +14,6 @@ The following project implements a RESTful API that allows CRUD (Create, Read, U
 - **Express.js:** A minimalist web framework for Node.js, designed for building web applications and APIs. It simplifies the server creation process that is already available in Node. In this project, Express.js facilitates the routing, handling HTTP requests, and crafting responses.
 - **PostgreSQL:** A powerful, open-source relational database system used for data persistence in this application.
 - Docker
+- Drizzle ORM
 
 ## Considerations for a production-ready solution (summarized)
-
-## Getting started
-
-## License
